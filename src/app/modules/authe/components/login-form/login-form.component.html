@@ -1,0 +1,18 @@
+<div class="container-form">
+    <form action="" class="form" [formGroup]="loginForm" (ngSubmit)="login()">
+        <mat-form-field>
+            <mat-icon matIconPrefix>email</mat-icon>
+            <input type="text" formControlName="email" matInput placeholder="email">
+
+        </mat-form-field>
+        <mat-form-field>
+            <mat-icon matIconPrefix>password</mat-icon>
+            <input type="text" formControlName="pass" matInput placeholder="password">
+          
+        </mat-form-field>
+        <div class="actions">
+            <button mat-raised-button color="warn" type="submit">Ingresar</button>
+            <button mat-button (click)="toRegister()" type="button">Registrate aqui</button>
+        </div>
+    </form>
+</div>

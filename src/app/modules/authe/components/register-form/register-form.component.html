@@ -1,0 +1,38 @@
+<div class="container-form">
+    <form action="" class="form" [formGroup]="registerForm" (ngSubmit)="submitData()">
+        <div class="row">
+            <mat-form-field>
+                <mat-icon matIconPrefix>email</mat-icon>
+                <input type="text" formControlName="name" matInput placeholder="Name">
+
+            </mat-form-field>
+            <mat-form-field>
+                <mat-icon matIconPrefix>email</mat-icon>
+                <input type="text" formControlName="lastName" matInput placeholder="Last Name">
+            </mat-form-field>
+        </div>
+        <mat-form-field>
+            <mat-icon matIconPrefix>email</mat-icon>
+            <input type="text" formControlName="email" matInput placeholder="email">
+
+        </mat-form-field>
+
+        <div class="row">
+            <mat-form-field>
+                <mat-icon matIconPrefix>password</mat-icon>
+                <input type="password" formControlName="pass" matInput placeholder="pass">
+
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-icon matIconPrefix>password</mat-icon>
+                <input type="password" formControlName="confirmPass" matInput placeholder="confirmPass">
+
+            </mat-form-field>
+        </div>
+        <div class="actions">
+            <button mat-raised-button color="warn" type="submit" [disabled]="registerForm.invalid">Ingresar</button>
+            <button mat-button type="button" (click)="toLogin()">¿Ya tienes cuenta? ingresa aqui</button>
+        </div>
+    </form>
+</div>
